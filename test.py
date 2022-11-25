@@ -1,3 +1,6 @@
+#PLEASE WRITE THE GITHUB URL BELOW!
+#https://github.com/shinning-buddy/OSS_project/blob/3d3e6b0953e3f28a8f31bcff49cee1065e88c179/test.py
+
 import sys
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -38,7 +41,7 @@ def random_forest_train_test(x_train, x_test, y_train, y_test):
 	#To-Do: Implement this function
     rf_cls = RandomForestClassifier()
     rf_cls.fit(x_train, y_train)
-    acc = accuracy_score(rf_cls.predict(x_test), y_test)
+    acc = accuracy_score(y_test, rf_cls.predict(x_test))
     prec = precision_score(y_test, rf_cls.predict(x_test))
     recall = recall_score(y_test, rf_cls.predict(x_test))
     return acc, prec, recall
